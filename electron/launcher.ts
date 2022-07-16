@@ -423,7 +423,8 @@ async function runWineCommand(
 
   const env_vars = {
     ...process.env,
-    ...getWineEnvSetup(wineVersion, winePrefix)
+    ...getWineEnvSetup(wineVersion, winePrefix),
+    ...setupEnvVars(gameSettings)
   }
 
   let additional_command = ''
